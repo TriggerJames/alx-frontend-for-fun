@@ -8,6 +8,7 @@ import os
 import re
 import hashlib
 
+
 def convert_headings(line):
     """
     Convert Markdown headings to HTML headings.
@@ -16,6 +17,7 @@ def convert_headings(line):
         if line.startswith('#' * i + ' '):
             return f"<h{i}>{line[i+1:].strip()}</h{i}>"
     return line
+
 
 def convert_unordered_list(lines):
     """
@@ -38,6 +40,7 @@ def convert_unordered_list(lines):
         html_lines.append("</ul>")
     return html_lines
 
+
 def convert_ordered_list(lines):
     """
     Convert Markdown ordered lists to HTML ordered lists.
@@ -59,6 +62,7 @@ def convert_ordered_list(lines):
         html_lines.append("</ol>")
     return html_lines
 
+
 def convert_paragraphs(lines):
     """
     Convert plain text to HTML paragraphs and handle line breaks.
@@ -79,6 +83,7 @@ def convert_paragraphs(lines):
         html_lines.append("</p>")
     return html_lines
 
+
 def convert_bold_and_emphasis(line):
     """
     Convert Markdown bold and emphasis to HTML.
@@ -87,18 +92,25 @@ def convert_bold_and_emphasis(line):
     line = re.sub(r'__(.+?)__', r'<em>\1</em>', line)  # Emphasis
     return line
 
+
 def convert_custom(line):
     """
     Convert custom Markdown syntax for MD5 and remove 'c' characters.
     """
-    line = re.sub(r'\[\[(.+?)\]\]', lambda m: hashlib.md5(m.group(1).encode()).hexdigest(), line)  # MD5
-    line = re.sub(r'\(\((.+?)\)\)', lambda m: m.group(1).replace('c', '').replace('C', ''), line)  # Remove 'c'
+    line = re.sub
+    (r'\[\[(.+?)\]\]',
+     lambda m: hashlib.md5(m.group(1).encode()).hexdigest(), line)
+
+    line = re.sub
+    (r'\(\((.+?)\)\)',
+     lambda m: m.group(1).replace('c', '').replace('C', ''), line)
     return line
 
 if __name__ == "__main__":
     # Check if the number of arguments is less than 2
     if len(sys.argv) < 3:
-        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
+        print("Usage: ./markdown2html.py README.md README.html",
+              file=sys.stderr)
         sys.exit(1)
 
     # Get file names from arguments
