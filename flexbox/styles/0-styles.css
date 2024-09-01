@@ -1,3 +1,4 @@
+
 /* SUMMARY
     1. GLOBAL
     2. LAYOUT
@@ -179,10 +180,6 @@
   
   /* Grid
       ============================= */
-
-  .row {
-    display: flex;
-  }
   
   ul.row {
     margin: 0;
@@ -190,7 +187,8 @@
     list-style: none;
   }
   
-  [class*='col-'] {
+    
+  [class*='col-'] {    
     padding: 0.5rem;
   }
   
@@ -202,6 +200,10 @@
     width: 50%;
   }
   
+  .row {
+    display: flex;
+  }
+
   /* Navbar
       ============================= */
   
@@ -259,7 +261,7 @@
     padding: var(--header-padding);
          position: relative;
          z-index: 3;
-         background: transparent !important;
+         background: transparent;
   }
   
   .header-logo {
