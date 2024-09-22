@@ -1,11 +1,20 @@
-# Markdown to HTML
+# Web Stack Specialization - Front-end
 
-# Taasks
+## Web Stack - Front-end
 
-0. Start a script
-1. Headings
-2. Unordered listing
-3. Ordered listing
-4. Simple text
-5. Bold and emphasis text
-6. ... but why??
+### Description:bulb:
+* Advanced HTML/CSS
+* Developer Tools
+* SCSS
+* Flexbox
+* Responsive Design
+* Accesibility
+* Working with Designers
+* Design Implementation
+* Bootstrap
+* Advanced Javascript
+* Advanced JQuery
+* Cookies & Local Storage
+* ES6
+* Webpack
+* Building Portfolio Applications
