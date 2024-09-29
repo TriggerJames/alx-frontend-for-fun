@@ -1,9 +1,10 @@
-/* Nested hover change button color on hover */
-
+// Style for button tag
 button {
-    color: #FF0000;
-
+    color: #FF0000; // Initial text color for button
+  
+    // Hover state for button
     &:hover {
-        color: #00FF00;
+      color: #00FF00; // Text color changes on hover
     }
-}
+  }
+  
